@@ -1,0 +1,22 @@
+.course-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.course-link:hover {
+  color: #007bff;
+}
+
+.course-link h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+} 

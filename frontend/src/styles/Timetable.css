@@ -1,0 +1,287 @@
+/* Timetable Pages Styles */
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.date-header {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.timetable-container,
+.exam-timetable-container {
+  margin-top: 20px;
+}
+
+.timetable-day-section,
+.exam-day-section {
+  margin-bottom: 30px;
+}
+
+.timetable-table,
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timetable-table th,
+.exam-table th {
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.timetable-table td,
+.exam-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.timetable-table tr:hover,
+.exam-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.page-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.loading-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.error-message, .no-data-message {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.error-message p {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.no-data-message p {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.class-type-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.class-type-badge.physical {
+  background-color: #e8f4fd;
+  color: #3498db;
+}
+
+.class-type-badge.online {
+  background-color: #f0fdf4;
+  color: #27ae60;
+}
+
+.online-link {
+  color: #3498db;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.online-link:hover {
+  text-decoration: underline;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-small:hover {
+  background-color: #2980b9;
+}
+
+.venue {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-badge.published {
+  background-color: #e8f4fd;
+  color: #3498db;
+}
+
+.status-badge.draft {
+  background-color: #ffeaa7;
+  color: #fdcb6e;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 992px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filters {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* Courses Table Styles */
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses-table th {
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.courses-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.courses-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.courses-container {
+  margin-top: 20px;
+}
+
+/* Status badge styles for course status */
+.status-badge.active {
+  background-color: #e8f4fd;
+  color: #3498db;
+}
+
+.status-badge.upcoming {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
