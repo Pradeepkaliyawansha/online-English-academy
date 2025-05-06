@@ -15,6 +15,8 @@ import examRoutes from "./routes/examRoutes.js";
 import attendanceRoutes from "./routes/attendanceRoutes.js";
 import publicRoutes from "./routes/publicRoutes.js";
 import studentRoutes from "./routes/studentRoutes.js";
+import quizRoutes from "./routes/quizRoutes.js";
+import quizAttemptRoutes from "./routes/quizAttemptRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -57,6 +59,10 @@ app.use("/api/payments", paymentRoutes);
 app.use("/api/exams", examRoutes);
 app.use("/api/attendance", attendanceRoutes);
 app.use("/api/students", studentRoutes);
+
+// Add the quiz routes
+app.use("/api/quizzes", quizRoutes);
+app.use("/api/quiz-attempts", quizAttemptRoutes);
 
 // Error handling for undefined routes
 app.use((req, res) => {
